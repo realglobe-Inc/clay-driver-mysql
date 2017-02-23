@@ -74,7 +74,7 @@ Usage
 ```javascript
 'use strict'
 
-const { MysqlDriver } = require('clay-driver-sqlite')
+const { MysqlDriver } = require('clay-driver-mysql')
 
 {
   const clayLump = require('clay-lump')
@@ -214,10 +214,10 @@ Links
 
 + [ClayDB][clay_d_b_url]
 + [Realglobe, Inc.][realglobe,_inc__url]
-+ [Sequelize][sequelize_url]
++ [MySQL][my_s_q_l_url]
 
 [clay_d_b_url]: https://github.com/realglobe-Inc/claydb
 [realglobe,_inc__url]: http://realglobe.jp
-[sequelize_url]: http://docs.sequelizejs.com/
+[my_s_q_l_url]: https://www.mysql.com/
 
 <!-- Links End -->
