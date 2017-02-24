@@ -5,6 +5,7 @@
 'use strict'
 
 const MysqlDriver = require('../lib/mysql_driver.js')
+const clayDriverTests = require('clay-driver-tests')
 const setupMysqlDatabase = require('../lib/helpers/setup_mysql_database')
 const assert = require('assert')
 const co = require('co')
@@ -17,10 +18,17 @@ describe('mysql-driver', function () {
   const DB_USER = 'hoge'
   const DB_PASSWORD = 'fuge'
   const DATABASE = 'clay_driver_mysql_test'
+  const DATABASE2 = 'clay_driver_mysql_test2'
 
   before(() => co(function * () {
     yield setupMysqlDatabase(DB_ROOT_USER, DB_ROOT_PASSWORD, {
       database: DATABASE,
+      username: DB_USER,
+      password: DB_PASSWORD
+    })
+
+    yield setupMysqlDatabase(DB_ROOT_USER, DB_ROOT_PASSWORD, {
+      database: DATABASE2,
       username: DB_USER,
       password: DB_PASSWORD
     })
@@ -33,6 +41,8 @@ describe('mysql-driver', function () {
   it('Mysql driver', () => co(function * () {
 
     let driver = new MysqlDriver(DATABASE, DB_USER, DB_PASSWORD, {})
+    yield driver._db.drop()
+
     let created = yield driver.create('users', {
       username: 'okunishinishi'
     })
@@ -74,6 +84,17 @@ describe('mysql-driver', function () {
     assert.equal((yield driver.list('users')).meta.total, 1)
     yield driver.drop('users')
     assert.equal((yield driver.list('users')).meta.total, 0)
+
+    yield driver._db.drop()
+  }))
+
+  it('Run clayDriverTests', () => co(function * () {
+    let driver = new MysqlDriver(DATABASE2, DB_USER, DB_PASSWORD, {})
+    yield driver._db.drop()
+
+    yield clayDriverTests.run(driver)
+
+    yield driver._db.drop()
   }))
 })
 
