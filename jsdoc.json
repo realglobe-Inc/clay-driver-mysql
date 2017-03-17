@@ -54,57 +54,7 @@
           }
         ],
         "examples": []
-      },
-      "functions": [
-        {
-          "name": "one",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "list",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "create",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "update",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "destroy",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "drop",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        }
-      ]
+      }
     },
     {
       "name": "Driver",
@@ -324,54 +274,6 @@
         "examples": []
       },
       "functions": [
-        {
-          "name": "one",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "list",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "create",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "update",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "destroy",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "drop",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
         {
           "name": "one",
           "access": "",
