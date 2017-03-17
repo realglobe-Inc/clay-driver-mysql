@@ -30,13 +30,13 @@ module.exports = {
         [item.name]: wrapper(item)
       }), {})
       let classes = byName(jsdoc[ 'classes' ], { wrapper: asClass })
-      let { SqliteDriver } = classes
+      let { MysqlDriver } = classes
 
       let functions = byName(jsdoc[ 'functions' ], { wrapper: asFunc })
       let { create } = functions
       return {
         classes: [
-          SqliteDriver
+          MysqlDriver
         ].filter(Boolean),
         functions: [
           create
