@@ -11,7 +11,7 @@ const co = require('co')
 const clayLump = require('clay-lump')
 
 describe('mysql-driver', function () {
-  this.timeout(3000)
+  this.timeout(8000)
 
   const DB_ROOT_USER = 'root'
   const DB_ROOT_PASSWORD = ''
