@@ -1,11 +1,11 @@
-# clay-driver-mysql@1.0.1
+# clay-driver-mysql@2.0.0
 
 Mysql driver for ClayDB
 
 + Functions
   + [create(args)](#clay-driver-mysql-function-create)
-+ [`MysqlDriver`](#clay-driver-mysql-classes) Class
-  + [new MysqlDriver(filename, options)](#clay-driver-mysql-classes-mysql-driver-constructor)
++ [`MysqlDriver`](#clay-driver-mysql-class) Class
+  + [new MysqlDriver(filename, options)](#clay-driver-mysql-class-mysql-driver-constructor)
 
 ## Functions
 
@@ -21,7 +21,7 @@ Create driver instance
 
 
 
-<a class='md-heading-link' name="clay-driver-mysql-classes"></a>
+<a class='md-heading-link' name="clay-driver-mysql-class"></a>
 
 ## `MysqlDriver` Class
 
@@ -33,7 +33,7 @@ Driver to save data into sqlite
 
 
 
-<a class='md-heading-link' name="clay-driver-mysql-classes-mysql-driver-constructor" ></a>
+<a class='md-heading-link' name="clay-driver-mysql-class-mysql-driver-constructor" ></a>
 
 ### new MysqlDriver(filename, options)
 
