@@ -79,7 +79,7 @@ const { MysqlDriver } = require('clay-driver-mysql')
 {
   const clayLump = require('clay-lump')
   let lump01 = clayLump({
-    driver: new MysqlDriver({})
+    driver: new MysqlDriver('my-app', 'user01', 'xxxxxx', {})
   })
   /* ... */
 }
@@ -103,7 +103,7 @@ Mysql driver for ClayDB
 + Functions
   + [create(args)](#clay-driver-mysql-function-create)
 + [`MysqlDriver`](#clay-driver-mysql-class) Class
-  + [new MysqlDriver(filename, options)](#clay-driver-mysql-class-mysql-driver-constructor)
+  + [new MysqlDriver(database, username, password, options)](#clay-driver-mysql-class-mysql-driver-constructor)
 
 ## Functions
 
@@ -133,13 +133,15 @@ Driver to save data into sqlite
 
 <a class='md-heading-link' name="clay-driver-mysql-class-mysql-driver-constructor" ></a>
 
-### new MysqlDriver(filename, options)
+### new MysqlDriver(database, username, password, options)
 
 Constructor of MysqlDriver class
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| filename | string | Filename to save |
+| database | string | Name of database |
+| username | string | Database username |
+| password | string | Database password |
 | options | Object | Optional settings |
 
 

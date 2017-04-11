@@ -37,9 +37,25 @@
         "description": "Driver to save data into sqlite",
         "parameters": [
           {
-            "name": "filename",
+            "name": "database",
             "type": "string",
-            "description": "Filename to save",
+            "description": "Name of database",
+            "default": "",
+            "optional": "",
+            "nullable": ""
+          },
+          {
+            "name": "username",
+            "type": "string",
+            "description": "Database username",
+            "default": "",
+            "optional": "",
+            "nullable": ""
+          },
+          {
+            "name": "password",
+            "type": "string",
+            "description": "Database password",
             "default": "",
             "optional": "",
             "nullable": ""
