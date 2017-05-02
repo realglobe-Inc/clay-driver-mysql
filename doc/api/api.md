@@ -45,6 +45,8 @@ Constructor of MysqlDriver class
 | username | string | Database username |
 | password | string | Database password |
 | options | Object | Optional settings |
+| options.logging | boolean,function | Logging option |
+| options.benchmark | boolean | Show benchmark |
 
 
 
