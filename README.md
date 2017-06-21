@@ -96,7 +96,7 @@ const { MysqlDriver } = require('clay-driver-mysql')
 API
 ---------
 
-# clay-driver-mysql@2.0.0
+# clay-driver-mysql@2.0.1
 
 Mysql driver for ClayDB
 
@@ -143,6 +143,8 @@ Constructor of MysqlDriver class
 | username | string | Database username |
 | password | string | Database password |
 | options | Object | Optional settings |
+| options.logging | boolean,function | Logging option |
+| options.benchmark | boolean | Show benchmark |
 
 
 
