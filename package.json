@@ -24,7 +24,7 @@
   "dependencies": {
     "clay-constants": "^3.0.2",
     "clay-driver-benchmarks": "^2.0.1",
-    "clay-driver-sequelize": "^3.0.5",
+    "clay-driver-sequelize": "^3.0.13",
     "co": "^4.6.0",
     "mysql": "^2.13.0"
   },
