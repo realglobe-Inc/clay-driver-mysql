@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-mysql",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Mysql driver for ClayDB",
   "main": "lib",
   "scripts": {
@@ -24,7 +24,7 @@
   "dependencies": {
     "clay-constants": "^3.0.2",
     "clay-driver-benchmarks": "^2.0.1",
-    "clay-driver-sequelize": "^3.0.13",
+    "clay-driver-sequelize": "^4.0.2",
     "co": "^4.6.0",
     "mysql": "^2.13.0"
   },
