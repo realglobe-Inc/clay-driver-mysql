@@ -11,7 +11,7 @@ const co = require('co')
 const clayLump = require('clay-lump')
 
 describe('mysql-driver', function () {
-  this.timeout(8000)
+  this.timeout(18000)
 
   const DB_ROOT_USER = 'root'
   const DB_ROOT_PASSWORD = ''
@@ -117,6 +117,33 @@ describe('mysql-driver', function () {
     }
 
     yield Person.drop()
+  }))
+
+  it('A lot of CRUD', () => co(function * () {
+    let driver = new MysqlDriver(DATABASE, DB_USER, DB_PASSWORD, {})
+    yield driver.drop('Box')
+
+    const NUMBER_OF_ENTITY = 100
+    const NUMBER_OF_ATTRIBUTE = 20
+    let ids = []
+
+    // Create
+    {
+      let startAt = new Date()
+      let creatingQueue = []
+      for (let i = 0; i < NUMBER_OF_ENTITY; i++) {
+        let attributes = new Array(NUMBER_OF_ATTRIBUTE - 1)
+          .fill(null)
+          .reduce((attr, _, j) => Object.assign(attr, {
+            [`attr-${j}`]: j
+          }), { index: i })
+        creatingQueue.push(driver.create('Box', attributes))
+      }
+      ids.push(
+        ...(yield Promise.all(creatingQueue)).map(({ id }) => id)
+      )
+      console.log(`Took ${new Date() - startAt}ms for ${NUMBER_OF_ENTITY} entities, ${NUMBER_OF_ATTRIBUTE} attributes to create`)
+    }
   }))
 })
 
