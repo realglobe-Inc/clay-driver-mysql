@@ -96,7 +96,7 @@ const { MysqlDriver } = require('clay-driver-mysql')
 API
 ---------
 
-# clay-driver-mysql@3.0.5
+# clay-driver-mysql@4.0.0
 
 Mysql driver for ClayDB
 
