@@ -1,4 +1,4 @@
-# clay-driver-mysql@4.0.0
+# clay-driver-mysql@4.0.1
 
 Mysql driver for ClayDB
 
