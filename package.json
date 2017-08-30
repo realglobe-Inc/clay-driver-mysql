@@ -23,7 +23,7 @@
   "homepage": "https://github.com/realglobe-Inc/clay-driver-mysql#readme",
   "dependencies": {
     "clay-constants": "^3.2.1",
-    "clay-driver-sequelize": "^6.0.2",
+    "clay-driver-sequelize": "^6.0.3",
     "mysql2": "^1.4.2"
   },
   "devDependencies": {
@@ -35,7 +35,7 @@
     "ape-tasking": "^4.0.9",
     "ape-tmpl": "^6.0.0",
     "ape-updating": "^4.1.1",
-    "clay-driver-benchmarks": "^2.0.1",
+    "clay-driver-benchmarks": "^2.0.3",
     "clay-lump": "^4.2.8",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
