@@ -13,7 +13,7 @@ const DB_ROOT_USER = 'root'
 const DB_ROOT_PASSWORD = ''
 const DB_USER = 'benchmark'
 const DB_PASSWORD = 'benchmark'
-const DATABASE = 'clay_driver_mysql_benchmark'
+const DATABASE = 'clay_d_mysql_b'
 
 co(function * () {
   yield setupMysqlDatabase(DB_ROOT_USER, DB_ROOT_PASSWORD, {
