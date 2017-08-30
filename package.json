@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-mysql",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Mysql driver for ClayDB",
   "main": "lib",
   "scripts": {
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/realglobe-Inc/clay-driver-mysql#readme",
   "dependencies": {
     "clay-constants": "^3.2.1",
-    "clay-driver-sequelize": "^5.2.5",
+    "clay-driver-sequelize": "^6.0.1",
     "mysql2": "^1.4.2"
   },
   "devDependencies": {
