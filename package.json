@@ -23,7 +23,7 @@
   "homepage": "https://github.com/realglobe-Inc/clay-driver-mysql#readme",
   "dependencies": {
     "amkdirp": "^2.0.0",
-    "clay-constants": "^3.3.1",
+    "clay-constants": "^3.4.2",
     "clay-driver-sequelize": "^6.4.2",
     "moment": "^2.19.1",
     "mysql2": "^1.4.2",
