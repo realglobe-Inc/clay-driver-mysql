@@ -24,7 +24,7 @@
   "dependencies": {
     "amkdirp": "^2.0.0",
     "clay-constants": "^3.4.4",
-    "clay-driver-sequelize": "^6.4.13",
+    "clay-driver-sequelize": "^6.4.14",
     "moment": "^2.19.1",
     "mysql2": "^1.4.2",
     "mysqldump": "^1.4.2"
@@ -41,7 +41,7 @@
     "clay-driver-benchmarks": "^2.0.3",
     "clay-lump": "^4.2.19",
     "coz": "^6.0.20",
-    "eslint": "^4.10.0",
+    "eslint": "^4.11.0",
     "injectmock": "^2.0.0",
     "sg-templates": "^1.4.2",
     "sugos-travis": "^2.0.7",
