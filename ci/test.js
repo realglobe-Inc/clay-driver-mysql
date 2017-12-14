@@ -13,6 +13,7 @@ const amocha = require('amocha')
 
 runTasks('test', [
   () => amocha('test/*_test.js', {
-    timeout: 4000
+    timeout: 4000,
+    exit: true
   })
 ], true)
