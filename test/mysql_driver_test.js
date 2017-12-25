@@ -33,14 +33,15 @@ describe('mysql-driver', function () {
 
   it('Mysql driver', async () => {
     let driver = new MysqlDriver(DATABASE, DB_USER, DB_PASSWORD, {
-      logging: console.log
+      // logging: console.log
     })
     await driver.drop('User')
 
-    let created = await driver.create('User', {
-      username: 'okunishinishi'
+    const created = await driver.create('User', {
+      username: 'okunishinishi',
+      message: 'Hey 😄'
     })
-    let created2 = await driver.create('User', {
+    const created2 = await driver.create('User', {
       username: 'hoge'
     })
     ok(created2.id !== created.id)
