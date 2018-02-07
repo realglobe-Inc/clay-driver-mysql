@@ -4,7 +4,7 @@ compiler: gcc
 dist: trusty
 
 node_js:
-- '7'
+- '8'
 before_install:
 - npm i npm-cli-login -g
 - npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
