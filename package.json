@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-mysql",
-  "version": "5.2.22",
+  "version": "5.2.23",
   "description": "Mysql driver for ClayDB",
   "main": "lib",
   "scripts": {
