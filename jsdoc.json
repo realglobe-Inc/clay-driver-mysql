@@ -22,27 +22,6 @@
             }
         },
         {
-            "name": "create",
-            "access": "",
-            "virtual": false,
-            "description": "Create driver instance",
-            "parameters": [
-                {
-                    "name": "args",
-                    "type": "*",
-                    "description": "",
-                    "default": "",
-                    "optional": "",
-                    "nullable": ""
-                }
-            ],
-            "examples": [],
-            "returns": {
-                "type": "MysqlDriver",
-                "description": ""
-            }
-        },
-        {
             "name": "setupMysqlDatabase",
             "access": "",
             "virtual": false,
@@ -52,74 +31,6 @@
         }
     ],
     "classes": [
-        {
-            "name": "MysqlDriver",
-            "description": "",
-            "extends": [
-                "SequelizeDriver"
-            ],
-            "access": "",
-            "virtual": false,
-            "fires": "",
-            "constructor": {
-                "name": "MysqlDriver",
-                "description": "Driver to save data into sqlite",
-                "parameters": [
-                    {
-                        "name": "database",
-                        "type": "string",
-                        "description": "Name of database",
-                        "default": "",
-                        "optional": "",
-                        "nullable": ""
-                    },
-                    {
-                        "name": "username",
-                        "type": "string",
-                        "description": "Database username",
-                        "default": "",
-                        "optional": "",
-                        "nullable": ""
-                    },
-                    {
-                        "name": "password",
-                        "type": "string",
-                        "description": "Database password",
-                        "default": "",
-                        "optional": "",
-                        "nullable": ""
-                    },
-                    {
-                        "name": "options",
-                        "type": "Object",
-                        "description": "Optional settings",
-                        "default": "{}",
-                        "optional": true,
-                        "nullable": ""
-                    },
-                    {
-                        "name": "options.logging",
-                        "type": [
-                            "boolean",
-                            "function"
-                        ],
-                        "description": "Logging option",
-                        "default": "",
-                        "optional": true,
-                        "nullable": ""
-                    },
-                    {
-                        "name": "options.benchmark",
-                        "type": "boolean",
-                        "description": "Show benchmark",
-                        "default": "",
-                        "optional": true,
-                        "nullable": ""
-                    }
-                ],
-                "examples": []
-            }
-        },
         {
             "name": "MysqlDriver",
             "description": "",
