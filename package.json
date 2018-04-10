@@ -24,7 +24,7 @@
   "dependencies": {
     "amkdirp": "^2.0.0",
     "clay-constants": "^3.4.4",
-    "clay-driver-sequelize": "^6.5.1",
+    "clay-driver-sequelize": "^6.5.0",
     "execcli": "^5.0.2",
     "moment": "^2.22.0",
     "mysql2": "^1.5.3"
