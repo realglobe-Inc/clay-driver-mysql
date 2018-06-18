@@ -42,6 +42,7 @@
     "coz": "^7.0.2",
     "eslint": "^4.19.1",
     "injectmock": "^2.0.0",
+    "leakage": "^0.4.0",
     "sg-templates": "^1.4.2",
     "sugos-travis": "^2.0.7",
     "the-script-jsdoc": "^2.0.2"

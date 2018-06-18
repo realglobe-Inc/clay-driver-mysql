@@ -7,7 +7,7 @@
 const MysqlDriver = require('../lib/mysql_driver.js')
 const setupMysqlDatabase = require('../lib/helpers/setup_mysql_database')
 const {ok, equal, deepEqual} = require('assert')
-const co = require('co')
+const leakage = require('leakage')
 const clayLump = require('clay-lump')
 
 describe('mysql-driver', function () {
@@ -154,6 +154,15 @@ describe('mysql-driver', function () {
       console.log(`Took ${new Date() - startAt}ms for ${NUMBER_OF_ENTITY} entities, ${NUMBER_OF_ATTRIBUTE} attributes to create`)
     }
 
+    await driver.close()
+  })
+
+  it('leakage', async () => {
+    const driver = new MysqlDriver(DATABASE, DB_USER, DB_PASSWORD, {})
+    await driver.drop('L')
+    await leakage.iterate.async(async () => {
+      await driver.create('L', {a: 1})
+    })
     await driver.close()
   })
 })
