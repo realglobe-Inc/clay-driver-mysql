@@ -48,20 +48,20 @@ describe('mysql-driver', function () {
     ok(created.id)
     equal(created.username, 'okunishinishi')
 
-    let one = await driver.one('User', created.id)
+    const one = await driver.one('User', created.id)
 
     equal(String(created.id), String(one.id))
 
-    let updated = await driver.update('User', one.id, {
+    const updated = await driver.update('User', one.id, {
       password: 'hogehoge'
     })
     equal(String(updated.id), String(one.id))
     equal(updated.password, 'hogehoge')
 
-    let list01 = await driver.list('User', {})
+    const list01 = await driver.list('User', {})
     deepEqual(list01.meta, {offset: 0, limit: 100, length: 2, total: 2})
 
-    let list02 = await driver.list('User', {
+    const list02 = await driver.list('User', {
       filter: {username: 'okunishinishi'}
     })
     deepEqual(list02.meta, {offset: 0, limit: 100, length: 1, total: 1})
@@ -79,6 +79,10 @@ describe('mysql-driver', function () {
     equal((await driver.list('User')).meta.total, 1)
     await driver.drop('User')
     equal((await driver.list('User')).meta.total, 0)
+
+    {
+      await driver.list('User', {})
+    }
 
     await driver.close()
   })
@@ -159,12 +163,11 @@ describe('mysql-driver', function () {
 
   it('leakage', async () => {
 
-    return // FIXME leakage
-
     const driver = new MysqlDriver(DATABASE, DB_USER, DB_PASSWORD, {})
     await driver.drop('L')
     await leakage.iterate.async(async () => {
-      await driver.create('L', {a: 1})
+      const created = await driver.create('L', {a: 1})
+      await driver.destroy('L', created.id)
     })
     await driver.close()
   })
