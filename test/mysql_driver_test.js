@@ -7,7 +7,6 @@
 const MysqlDriver = require('../lib/mysql_driver.js')
 const setupMysqlDatabase = require('../lib/helpers/setup_mysql_database')
 const {ok, equal, deepEqual} = require('assert')
-const co = require('co')
 const clayLump = require('clay-lump')
 
 describe('mysql-driver', function () {
