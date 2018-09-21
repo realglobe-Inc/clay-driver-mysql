@@ -24,27 +24,27 @@
   "dependencies": {
     "amkdirp": "^2.0.0",
     "clay-constants": "^3.4.4",
-    "clay-driver-sequelize": "^6.6.12",
+    "clay-driver-sequelize": "^6.6.13",
     "execcli": "^5.0.2",
     "moment": "^2.22.2",
     "mysql2": "^1.6.1"
   },
   "devDependencies": {
-    "ababel": "^5.0.3",
+    "ababel": "^5.0.6",
     "amocha": "^5.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^6.0.10",
+    "ape-tmpl": "^6.0.11",
     "ape-updating": "^5.0.1",
     "clay-driver-benchmarks": "^2.0.3",
-    "clay-lump": "^4.4.12",
+    "clay-lump": "^4.4.13",
     "coz": "^7.0.2",
-    "eslint": "^5.3.0",
+    "eslint": "^5.6.0",
     "injectmock": "^2.0.0",
     "sg-templates": "^1.4.2",
     "sugos-travis": "^2.0.7",
-    "the-script-jsdoc": "^2.0.2"
+    "the-script-jsdoc": "^2.0.3"
   },
   "engines": {
     "node": ">=7.6",
