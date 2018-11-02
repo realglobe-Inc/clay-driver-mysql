@@ -17,7 +17,6 @@ script:
 - ./ci/shim.js
 - ./ci/test.js
 - ./ci/doc.js
-- ./ci/benchmark.js
 after_success:
 - ./ci/travis/publish.js
 env:
