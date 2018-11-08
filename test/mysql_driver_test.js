@@ -6,14 +6,14 @@
 
 const MysqlDriver = require('../lib/mysql_driver.js')
 const setupMysqlDatabase = require('../lib/helpers/setup_mysql_database')
-const {ok, equal, deepEqual} = require('assert')
+const { ok, equal, deepEqual } = require('assert')
 const clayLump = require('clay-lump')
 
 describe('mysql-driver', function () {
   this.timeout(18000)
 
   const DB_ROOT_USER = 'root'
-  const DB_ROOT_PASSWORD = ''
+  const DB_ROOT_PASSWORD = 'root'
   const DB_USER = 'hoge'
   const DB_PASSWORD = 'fuge'
   const DATABASE = 'clay_driver_mysql_test'
@@ -58,17 +58,17 @@ describe('mysql-driver', function () {
     equal(updated.password, 'hogehoge')
 
     let list01 = await driver.list('User', {})
-    deepEqual(list01.meta, {offset: 0, limit: 100, length: 2, total: 2})
+    deepEqual(list01.meta, { offset: 0, limit: 100, length: 2, total: 2 })
 
     let list02 = await driver.list('User', {
-      filter: {username: 'okunishinishi'}
+      filter: { username: 'okunishinishi' }
     })
-    deepEqual(list02.meta, {offset: 0, limit: 100, length: 1, total: 1})
+    deepEqual(list02.meta, { offset: 0, limit: 100, length: 1, total: 1 })
 
     let list03 = await driver.list('User', {
-      page: {size: 1, number: 1}
+      page: { size: 1, number: 1 }
     })
-    deepEqual(list03.meta, {offset: 0, limit: 1, length: 1, total: 2})
+    deepEqual(list03.meta, { offset: 0, limit: 1, length: 1, total: 2 })
 
     let destroyed = await driver.destroy('User', one.id)
     equal(destroyed, 1)
@@ -109,13 +109,13 @@ describe('mysql-driver', function () {
     }])
 
     {
-      let people = await Person.list({filter: {pid: 1}, sort: ['age']})
+      let people = await Person.list({ filter: { pid: 1 }, sort: ['age'] })
       let ages = people.entities.map(p => p.age)
       deepEqual(ages, [1, 2, 3])
     }
 
     {
-      let people = await Person.list({filter: {pid: 1}, sort: ['-age']})
+      let people = await Person.list({ filter: { pid: 1 }, sort: ['-age'] })
       let ages = people.entities.map(p => p.age)
       deepEqual(ages, [3, 2, 1])
     }
@@ -144,11 +144,11 @@ describe('mysql-driver', function () {
           .fill(null)
           .reduce((attr, _, j) => Object.assign(attr, {
             [`attr-${j}`]: j
-          }), {index: i})
+          }), { index: i })
         creatingQueue.push(driver.create('Box', attributes))
       }
       ids.push(
-        ...(await Promise.all(creatingQueue)).map(({id}) => id)
+        ...(await Promise.all(creatingQueue)).map(({ id }) => id)
       )
       console.log(`Took ${new Date() - startAt}ms for ${NUMBER_OF_ENTITY} entities, ${NUMBER_OF_ATTRIBUTE} attributes to create`)
     }
